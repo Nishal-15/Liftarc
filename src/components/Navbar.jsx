@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, ChevronRight } from 'lucide-react';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -11,6 +13,14 @@ const Navbar = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    const navLinks = [
+        { name: 'Home', href: '#home' },
+        { name: 'About', href: '#aboutus' },
+        { name: 'Services', href: '#services' },
+        { name: 'Projects', href: '#projects' },
+        { name: 'Contact', href: '#contact' }
+    ];
 
     return (
         <nav 
@@ -26,46 +36,143 @@ const Navbar = () => {
                 left: '0',
                 right: '0',
                 borderRadius: '0',
-                padding: scrolled ? '10px 50px' : '15px 50px',
+                padding: scrolled ? '10px 0' : '20px 0',
                 boxShadow: scrolled ? '0 10px 30px rgba(0, 0, 0, 0.3)' : 'none',
                 zIndex: 1000
             }}
         >
             <div className="container">
                 <a className="navbar-brand d-flex align-items-center" href="#" style={{ textDecoration: 'none' }}>
-                    <img src="/logo.png" alt="Lift Arc Logo" className="navbar-logo" style={{ height: '60px', width: 'auto', transition: 'transform 0.3s ease' }} />
+                    <img 
+                        src="/logo.png" 
+                        alt="Lift Arc Logo" 
+                        className="navbar-logo" 
+                        style={{ 
+                            height: scrolled ? '45px' : '55px', 
+                            width: 'auto', 
+                            objectFit: 'contain',
+                            transition: 'all 0.3s ease' 
+                        }} 
+                    />
                 </a>
 
-                <button className="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-                    <span className="navbar-toggler-icon" style={{ filter: 'invert(1)' }}></span>
+                {/* Mobile Toggle Button */}
+                <button 
+                    className="d-lg-none border-0 bg-transparent text-light p-2"
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    style={{ outline: 'none' }}
+                >
+                    {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
 
-                <div className="collapse navbar-collapse justify-content-end" id="navbarContent">
-                    <ul className="navbar-nav align-items-lg-center gap-lg-4">
-                        {['Home', 'About', 'Services', 'Projects', 'Contact'].map((item) => (
-                            <li key={item} className="nav-item">
+                {/* Desktop Menu */}
+                <div className="collapse navbar-collapse justify-content-end d-none d-lg-block">
+                    <ul className="navbar-nav align-items-center gap-4">
+                        {navLinks.map((link) => (
+                            <li key={link.name} className="nav-item">
                                 <a 
                                     className="nav-link text-uppercase fw-bold px-0 py-2 position-relative custom-nav-link" 
-                                    href={`#${item.toLowerCase().replace(' ', '')}`} 
+                                    href={link.href}
                                     style={{ 
                                         color: '#ffffff', 
                                         fontSize: '0.85rem', 
                                         letterSpacing: '0.15em', 
-                                        opacity: 0.8
+                                        opacity: 0.85
                                     }}
                                 >
-                                    {item}
+                                    {link.name}
                                 </a>
                             </li>
                         ))}
-                        <li className="nav-item ms-lg-4">
-                            <a className="btn-primary-custom px-4 py-2" href="#contact" style={{ fontSize: '0.85rem', padding: '12px 28px', clipPath: 'polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%)' }}>
+                        <li className="nav-item ms-4">
+                            <a 
+                                className="btn-primary-custom" 
+                                href="#contact" 
+                                style={{ 
+                                    fontSize: '0.8rem', 
+                                    padding: '12px 28px', 
+                                    clipPath: 'polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%)' 
+                                }}
+                            >
                                 Get a Quote
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
+
+            {/* Mobile Menu Overlay */}
+            <AnimatePresence>
+                {isMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: '100vh' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                        className="position-fixed w-100 start-0 d-lg-none"
+                        style={{ 
+                            top: scrolled ? '65px' : '95px', 
+                            backgroundColor: 'rgba(15, 23, 42, 0.98)',
+                            backdropFilter: 'blur(20px)',
+                            zIndex: 999,
+                            overflow: 'hidden',
+                            borderTop: '1px solid rgba(255,255,255,0.1)'
+                        }}
+                    >
+                        <div className="container py-5">
+                            <ul className="list-unstyled d-flex flex-column gap-4">
+                                {navLinks.map((link, i) => (
+                                    <motion.li 
+                                        key={link.name}
+                                        initial={{ x: -20, opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        transition={{ delay: 0.1 * i }}
+                                    >
+                                        <a 
+                                            href={link.href}
+                                            onClick={() => setIsMenuOpen(false)}
+                                            className="text-light text-decoration-none d-flex align-items-center justify-content-between text-uppercase fw-black"
+                                            style={{ 
+                                                fontSize: '1.8rem', 
+                                                fontFamily: '"Barlow Condensed", sans-serif',
+                                                letterSpacing: '0.05em' 
+                                            }}
+                                        >
+                                            {link.name}
+                                            <ChevronRight className="text-accent" />
+                                        </a>
+                                    </motion.li>
+                                ))}
+                                <motion.li
+                                    initial={{ y: 20, opacity: 0 }}
+                                    animate={{ y: 0, opacity: 1 }}
+                                    transition={{ delay: 0.5 }}
+                                    className="mt-4"
+                                >
+                                    <a 
+                                        href="#contact" 
+                                        onClick={() => setIsMenuOpen(false)}
+                                        className="btn-primary-custom w-100 justify-content-center py-3"
+                                        style={{ fontSize: '1.2rem' }}
+                                    >
+                                        REQUEST QUOTE
+                                    </a>
+                                </motion.li>
+                            </ul>
+
+                            <div className="mt-5 pt-5 border-top border-white/5 text-center">
+                                <p className="text-muted small text-uppercase letter-spacing-widest">Connect with us</p>
+                                <div className="d-flex justify-content-center gap-4 mt-3">
+                                    <span className="text-light opacity-50">FB</span>
+                                    <span className="text-light opacity-50">LN</span>
+                                    <span className="text-light opacity-50">IN</span>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
             <style>{`
                 .custom-nav-link::after {
                     content: '';
@@ -85,7 +192,12 @@ const Navbar = () => {
                     width: 100%;
                 }
                 .nav-scrolled {
-                    box-shadow: 0 10px 30px rgba(0, 174, 239, 0.1);
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+                }
+                @media (max-width: 991px) {
+                    .navbar-brand img {
+                        height: 40px !important;
+                    }
                 }
             `}</style>
         </nav>
