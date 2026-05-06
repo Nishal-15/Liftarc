@@ -53,7 +53,7 @@ const Products = () => {
                   <div className="d-flex align-items-center gap-2 mb-3">
                     <span className="badge bg-accent px-2 py-1 text-uppercase" style={{ fontSize: '0.6rem', letterSpacing: '0.1em', borderRadius: '0' }}>{product.tag}</span>
                   </div>
-                  <h4 className="fw-black text-light text-uppercase" style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '1.4rem' }}>{product.title}</h4>
+                  <h4 className="fw-black text-light text-uppercase" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem' }}>{product.title}</h4>
                   <p className="text-light-muted mt-3 mb-4" style={{ fontSize: '0.95rem', lineHeight: 1.7, opacity: 0.95, fontWeight: 400 }}>{product.desc}</p>
                   <a href="#contact" className="btn-outline-custom w-100 justify-content-center py-2" style={{ fontSize: '0.8rem' }}>Order Information</a>
                 </div>

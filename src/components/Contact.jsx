@@ -55,7 +55,7 @@ const Contact = () => {
                                     <MapPin className="text-accent" />
                                 </div>
                                 <div>
-                                    <h6 className="fw-black text-light text-uppercase mb-3" style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '1.2rem' }}>Office Address</h6>
+                                    <h6 className="fw-black text-light text-uppercase mb-3" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem' }}>Office Address</h6>
                                     <p className="text-light small mb-0" style={{ lineHeight: 1.8, opacity: 0.7 }}>
                                         33C, Kunnathur Kavunder Complex,<br />
                                         Thottipalayam Road, Aerodrome area,<br />
@@ -70,7 +70,7 @@ const Contact = () => {
                                     <Phone className="text-accent" />
                                 </div>
                                 <div>
-                                    <h6 className="fw-black text-light text-uppercase mb-3" style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '1.2rem' }}>Phone Enquiry</h6>
+                                    <h6 className="fw-black text-light text-uppercase mb-3" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem' }}>Phone Enquiry</h6>
                                     <p className="text-light small mb-0"><a href="tel:+917708084027" className="text-light text-decoration-none" style={{ opacity: 0.7 }}>+91 77080 84027</a></p>
                                 </div>
                             </div>
@@ -80,7 +80,7 @@ const Contact = () => {
                                     <Mail className="text-accent" />
                                 </div>
                                 <div>
-                                    <h6 className="fw-black text-light text-uppercase mb-3" style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '1.2rem' }}>Email Support</h6>
+                                    <h6 className="fw-black text-light text-uppercase mb-3" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem' }}>Email Support</h6>
                                     <p className="text-light small mb-0"><a href="mailto:liftarc@gmail.com" className="text-light text-decoration-none" style={{ opacity: 0.7 }}>liftarc@gmail.com</a></p>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@ const Contact = () => {
                                     <Clock className="text-accent" />
                                 </div>
                                 <div>
-                                    <h6 className="fw-black text-light text-uppercase mb-3" style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '1.2rem' }}>Working Hours</h6>
+                                    <h6 className="fw-black text-light text-uppercase mb-3" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem' }}>Working Hours</h6>
                                     <p className="text-light small mb-0" style={{ opacity: 0.7 }}>Monday – Saturday<br />9:00 AM – 6:00 PM IST</p>
                                 </div>
                             </div>

@@ -134,7 +134,7 @@ const Navbar = () => {
                                             className="text-light text-decoration-none d-flex align-items-center justify-content-between text-uppercase fw-black"
                                             style={{ 
                                                 fontSize: '1.8rem', 
-                                                fontFamily: '"Barlow Condensed", sans-serif',
+                                                fontFamily: 'var(--font-heading)',
                                                 letterSpacing: '0.05em' 
                                             }}
                                         >

@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
                 <p className="text-light fst-italic mb-0" style={{ fontSize: '1rem', lineHeight: 1.7, opacity: 0.8 }}>
                    "Our mission is to bridge the gap between complex engineering challenges and durable, cost-effective fabrication solutions."
                 </p>
-                <div className="fw-black text-accent mt-3 text-uppercase" style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '0.8rem', letterSpacing: '0.15em' }}>— Management Team</div>
+                <div className="fw-black text-accent mt-3 text-uppercase" style={{ fontFamily: 'var(--font-heading)', fontSize: '0.8rem', letterSpacing: '0.15em' }}>— Management Team</div>
              </div>
           </div>
 
@@ -65,7 +65,7 @@ const WhyChooseUs = () => {
                         {reason.icon}
                      </div>
                      <div>
-                        <h4 className="fw-black text-light text-uppercase mb-2" style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '1.25rem' }}>{reason.title}</h4>
+                        <h4 className="fw-black text-light text-uppercase mb-2" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.25rem' }}>{reason.title}</h4>
                         <p className="text-light-muted mb-0" style={{ lineHeight: 1.8, opacity: 0.95, fontSize: '0.92rem' }}>{reason.desc}</p>
                      </div>
                    </div>

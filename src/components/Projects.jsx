@@ -75,7 +75,7 @@ const Projects = () => {
                                     transition: 'background 0.4s ease'
                                 }}>
                                     <span className="text-accent fw-bold text-uppercase mb-1" style={{ fontSize: '0.65rem', letterSpacing: '0.2em' }}>{project.category}</span>
-                                    <h4 className="text-light fw-black text-uppercase m-0" style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '1.2rem' }}>{project.title}</h4>
+                                    <h4 className="text-light fw-black text-uppercase m-0" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem' }}>{project.title}</h4>
                                     <div className="project-desc mt-3 text-muted small" style={{ maxHeight: '0', overflow: 'hidden', transition: 'max-height 0.4s ease, opacity 0.4s ease', opacity: 0 }}>
                                         {project.description}
                                     </div>

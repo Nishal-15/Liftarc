@@ -9,7 +9,7 @@ const Footer = () => {
                     <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
                         <a className="d-flex align-items-center gap-2 mb-4 text-decoration-none" href="#">
                             <img src="/logo.png" alt="Lift Arc Logo" style={{ height: '35px', width: 'auto' }} />
-                            <span className="navbar-brand-text fw-black text-light" style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '1.4rem', fontWeight: 900, letterSpacing: '0.1em', lineHeight: 1 }}>
+                            <span className="navbar-brand-text fw-black text-light" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 900, letterSpacing: '0.1em', lineHeight: 1 }}>
                                 
                             </span>
                         </a>
@@ -19,7 +19,7 @@ const Footer = () => {
                     </div>
 
                     <div className="col-lg-3 col-md-6 mb-4 mb-lg-0 px-lg-5">
-                        <h6 className="fw-black text-light text-uppercase mb-4" style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '1rem', letterSpacing: '0.1em' }}>Quick Links</h6>
+                        <h6 className="fw-black text-light text-uppercase mb-4" style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', letterSpacing: '0.1em' }}>Quick Links</h6>
                         <ul className="list-unstyled d-flex flex-column gap-3">
                             {['Home', 'AboutUs', 'Services', 'Products', 'Contact'].map((link) => (
                                 <li key={link}>
@@ -30,7 +30,7 @@ const Footer = () => {
                     </div>
 
                     <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                        <h6 className="fw-black text-light text-uppercase mb-4" style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '1rem', letterSpacing: '0.1em' }}>Core Expertise</h6>
+                        <h6 className="fw-black text-light text-uppercase mb-4" style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', letterSpacing: '0.1em' }}>Core Expertise</h6>
                         <ul className="list-unstyled d-flex flex-column gap-3">
                             <li className="text-light-muted small opacity-85" style={{ opacity: 0.85 }}>Steel Fabrication</li>
                             <li className="text-light-muted small opacity-85" style={{ opacity: 0.85 }}>Arc Welding Services</li>
@@ -40,7 +40,7 @@ const Footer = () => {
                     </div>
 
                     <div className="col-lg-3 col-md-6">
-                        <h6 className="fw-black text-light text-uppercase mb-4" style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '1rem', letterSpacing: '0.1em' }}>Connect With Us</h6>
+                        <h6 className="fw-black text-light text-uppercase mb-4" style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', letterSpacing: '0.1em' }}>Connect With Us</h6>
                         <div className="d-flex gap-3 mb-4">
                             <a href="#" className="p-2 border border-white/5 bg-white/5 text-muted transition-all hover-bg-accent"><Facebook size={18} /></a>
                             <a href="#" className="p-2 border border-white/5 bg-white/5 text-muted transition-all hover-bg-accent"><Linkedin size={18} /></a>

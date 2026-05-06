@@ -33,7 +33,7 @@ const Hero = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.7, duration: 1.2, ease: "easeOut" }}
               className="display-1 fw-black text-light mb-4" 
-              style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: 'clamp(3rem, 10vw, 7rem)', fontWeight: 900, lineHeight: 0.95, letterSpacing: '-0.02em' }}
+              style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(3rem, 10vw, 7rem)', fontWeight: 900, lineHeight: 0.95, letterSpacing: '-0.02em' }}
             >
               LIFT ARC<br/>
               <span className="text-accent">INDUSTRIES.</span> <br/>
@@ -71,7 +71,7 @@ const Hero = () => {
 
       {/* Decorative Large Background Text/Number */}
       <div className="hero-number position-absolute" style={{
-        fontFamily: '"Barlow Condensed", sans-serif',
+        fontFamily: 'var(--font-heading)',
         fontSize: '35vw',
         fontWeight: 900,
         color: 'rgba(255, 255, 255, 0.015)',
@@ -88,15 +88,15 @@ const Hero = () => {
       {/* Stats Quick Grid */}
       <div className="position-absolute d-none d-lg-flex" style={{ bottom: '80px', right: '5%', gap: '60px', zIndex: 10 }}>
         <div className="text-end" data-aos="fade-in" data-aos-delay="2200">
-          <div className="fs-1 fw-black text-light" style={{ fontFamily: '"Barlow Condensed", sans-serif', lineHeight: 1 }}>500<span className="text-accent">+</span></div>
+          <div className="fs-1 fw-black text-light" style={{ fontFamily: 'var(--font-heading)', lineHeight: 1 }}>500<span className="text-accent">+</span></div>
           <div className="text-light text-uppercase fw-bold" style={{ fontSize: '0.65rem', letterSpacing: '0.3em', marginTop: '5px', opacity: 0.8 }}>Projects Delivered</div>
         </div>
         <div className="text-end" data-aos="fade-in" data-aos-delay="2400">
-          <div className="fs-1 fw-black text-light" style={{ fontFamily: '"Barlow Condensed", sans-serif', lineHeight: 1 }}>9<span className="text-accent">+</span></div>
+          <div className="fs-1 fw-black text-light" style={{ fontFamily: 'var(--font-heading)', lineHeight: 1 }}>9<span className="text-accent">+</span></div>
           <div className="text-light text-uppercase fw-bold" style={{ fontSize: '0.65rem', letterSpacing: '0.3em', marginTop: '5px', opacity: 0.8 }}>Years Expertise</div>
         </div>
         <div className="text-end" data-aos="fade-in" data-aos-delay="2600">
-          <div className="fs-1 fw-black text-light" style={{ fontFamily: '"Barlow Condensed", sans-serif', lineHeight: 1 }}>98<span className="text-accent">%</span></div>
+          <div className="fs-1 fw-black text-light" style={{ fontFamily: 'var(--font-heading)', lineHeight: 1 }}>98<span className="text-accent">%</span></div>
           <div className="text-light text-uppercase fw-bold" style={{ fontSize: '0.65rem', letterSpacing: '0.3em', marginTop: '5px', opacity: 0.8 }}>Client Loyalty</div>
         </div>
       </div>

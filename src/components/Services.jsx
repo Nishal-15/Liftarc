@@ -67,7 +67,7 @@ const Services = () => {
                 cursor: 'pointer'
               }}>
                 {/* Large Background Transparent Number */}
-                <div className="position-absolute fs-1 fw-black text-light opacity-5" style={{ bottom: '20px', right: '30px', fontFamily: '"Barlow Condensed", sans-serif', fontSize: '5rem', pointerEvents: 'none' }}>0{index + 1}</div>
+                <div className="position-absolute fs-1 fw-black text-light opacity-5" style={{ bottom: '20px', right: '30px', fontFamily: 'var(--font-heading)', fontSize: '5rem', pointerEvents: 'none' }}>0{index + 1}</div>
                 
                 {/* Top Border Glow (Pseudo) */}
                 <div className="accent-line position-absolute top-0 start-0 w-0 h-2" style={{ transition: 'width 0.5s ease', width: '0%', height: '2px', backgroundColor: 'var(--accent)' }}></div>
@@ -81,7 +81,7 @@ const Services = () => {
                   {service.icon}
                 </div>
 
-                <h4 className="fw-black text-light text-uppercase mb-3" style={{ fontFamily: '"Barlow Condensed", sans-serif', fontSize: '1.5rem', letterSpacing: '0.05em' }}>{service.title}</h4>
+                <h4 className="fw-black text-light text-uppercase mb-3" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', letterSpacing: '0.05em' }}>{service.title}</h4>
                 <p className="text-light-muted mb-0" style={{ fontSize: '0.95rem', lineHeight: 1.7, opacity: 0.95, fontWeight: 400 }}>{service.desc}</p>
                 
                 <div className="mt-4 pt-4 border-top border-white/5 pb-2">

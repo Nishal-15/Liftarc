@@ -13,8 +13,8 @@
   --light: #f8f9fa;
   --muted: #cbd5e1; /* Brighter visibility */
   --border: rgba(255, 255, 255, 0.08);
-  --font-main: 'Barlow', sans-serif;
-  --font-heading: 'Barlow Condensed', sans-serif;
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
   --font-mono: 'Share Tech Mono', monospace;
 }
 
