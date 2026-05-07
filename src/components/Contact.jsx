@@ -139,7 +139,7 @@ const Contact = () => {
                                         </div>
                                     </div>
                                     <div className="col-12 text-center mt-3">
-                                        <button type="submit" className="btn-primary-custom w-100 py-3" style={{ fontSize: '0.68rem', letterSpacing: '0.28em' }}>
+                                        <button type="submit" className="btn-primary-custom w-100 py-3 justify-content-center" style={{ fontSize: '0.68rem', letterSpacing: '0.28em' }}>
                                             SUBMIT ENQUIRY <Send size={14} className="ms-2" />
                                         </button>
                                     </div>

@@ -90,15 +90,15 @@ const Hero = () => {
       {/* Stats Quick Grid */}
       <div className="position-absolute d-none d-lg-flex" style={{ bottom: '80px', right: '5%', gap: '60px', zIndex: 10 }}>
         <div className="text-end" data-aos="fade-in" data-aos-delay="2200">
-          <div className="fs-1 text-light" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontWeight: 900, lineHeight: 1, fontSize: '3rem' }}>500<span className="text-accent" style={{ fontStyle: 'normal' }}>+</span></div>
+          <div className="fs-1 text-light" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontWeight: 900, lineHeight: 1, fontSize: '3rem' }}>500<span style={{ fontStyle: 'normal', color: '#00AEEF' }}>+</span></div>
           <div className="text-light text-uppercase" style={{ fontSize: '0.58rem', letterSpacing: '0.35em', marginTop: '8px', opacity: 0.7, fontFamily: 'var(--font-tag)', fontWeight: 200 }}>Projects Delivered</div>
         </div>
         <div className="text-end" data-aos="fade-in" data-aos-delay="2400">
-          <div className="fs-1 text-light" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontWeight: 900, lineHeight: 1, fontSize: '3rem' }}>9<span className="text-accent" style={{ fontStyle: 'normal' }}>+</span></div>
+          <div className="fs-1 text-light" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontWeight: 900, lineHeight: 1, fontSize: '3rem' }}>9<span style={{ fontStyle: 'normal', color: '#00AEEF' }}>+</span></div>
           <div className="text-light text-uppercase" style={{ fontSize: '0.58rem', letterSpacing: '0.35em', marginTop: '8px', opacity: 0.7, fontFamily: 'var(--font-tag)', fontWeight: 200 }}>Years Expertise</div>
         </div>
         <div className="text-end" data-aos="fade-in" data-aos-delay="2600">
-          <div className="fs-1 text-light" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontWeight: 900, lineHeight: 1, fontSize: '3rem' }}>98<span className="text-accent" style={{ fontStyle: 'normal' }}>%</span></div>
+          <div className="fs-1 text-light" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontWeight: 900, lineHeight: 1, fontSize: '3rem' }}>98<span style={{ fontStyle: 'normal', color: '#00AEEF' }}>%</span></div>
           <div className="text-light text-uppercase" style={{ fontSize: '0.58rem', letterSpacing: '0.35em', marginTop: '8px', opacity: 0.7, fontFamily: 'var(--font-tag)', fontWeight: 200 }}>Client Loyalty</div>
         </div>
       </div>
