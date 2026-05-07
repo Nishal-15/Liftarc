@@ -19,13 +19,13 @@
   --font-tag: 'Josefin Sans', sans-serif;
   --font-mono: 'Share Tech Mono', monospace;
 
-  /* Light Theme Variables */
-  --light-bg: #ffffff;
-  --light-bg2: #f8fafc;
-  --light-bg3: #f1f5f9;
-  --light-text: #0f172a;
+  /* Lighter Blue Theme Variables */
+  --light-bg: #f0f9ff; /* Soft sky blue tint */
+  --light-bg2: #e0f2fe;
+  --light-bg3: #bae6fd;
+  --light-text: #0c4a6e; /* Deep ocean blue for contrast */
   --light-text-muted: #475569;
-  --light-border: rgba(15, 23, 42, 0.08);
+  --light-border: rgba(12, 74, 110, 0.08);
 }
 
 .light-theme {
