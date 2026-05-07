@@ -5,7 +5,7 @@ const projects = [
     {
         title: "Metal Storage Bin",
         category: "Storage Bins",
-        image: "/images/7.jpeg",
+        image: "/images/12.jpeg",
         description: "Durable industrial storage bin designed for heavy-duty applications and organized warehousing."
     },
     {
@@ -17,7 +17,7 @@ const projects = [
     {
         title: "Industrial Safety Gates",
         category: "Safety Systems",
-        image: "/images/8.jpeg",
+        image: "/images/10.jpeg",
         description: "Robust industrial-grade safety gates providing critical protection for restricted factory zones."
     },
     {
@@ -29,49 +29,49 @@ const projects = [
     {
         title: "Component Storage Bins",
         category: "Storage Bins",
-        image: "/images/9.jpeg",
+        image: "/images/7.jpeg",
         description: "Organized storage solutions for small to medium-sized industrial components and hardware."
     },
     {
         title: "Precision MS Clamps",
         category: "Clamps & Fixtures",
-        image: "/images/10.jpeg",
+        image: "/images/5.jpeg",
         description: "High-strength Mild Steel clamps designed for heavy-duty industrial fastening and structural support."
     },
     {
         title: "Industrial Work Table",
         category: "Workplace Solutions",
-        image: "/images/1.jpeg", 
+        image: "/images/9.jpeg", 
         description: "Sturdy, ergonomic workbenches built to withstand high-intensity engineering environments."
     },
     {
         title: "Electrical Control Panel",
         category: "Control Systems",
-        image: "/images/2.jpeg",
+        image: "/images/8.jpeg",
         description: "Custom-engineered electrical control panels for complex power management systems."
     },
     {
         title: "Precision Impellers",
         category: "Mechanical Parts",
-        image: "/images/3.jpeg",
+        image: "/images/4.jpeg",
         description: "Advanced mechanical impellers manufactured for superior fluid dynamics in industrial pumps."
     },
     {
         title: "VCB Spare Parts",
         category: "Electrical",
-        image: "/images/4.jpeg",
+        image: "/images/2.jpeg",
         description: "Essential high-voltage components for Vacuum Circuit Breakers and industrial switchgear."
     },
     {
         title: "Sheet Metal Assembly",
         category: "Precision Engineering",
-        image: "/images/5.jpeg",
+        image: "/images/3.jpeg",
         description: "Intricate sheet metal fabrication including high-precision bending and structural assembly."
     },
     {
         title: "Custom Machine Frame",
         category: "SPM Specialist",
-        image: "/images/6.jpeg",
+        image: "/images/1.jpeg",
         description: "Bespoke structural foundations for Special Purpose Machines and industrial equipment."
     }
 ];
