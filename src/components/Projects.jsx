@@ -3,52 +3,52 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const projects = [
     {
-        title: "TIG Precision Welding",
-        category: "Industrial Job Work",
-        image: "/images/mig_bg.png",
-        description: "Specialized clean-arc TIG welding for critical stainless steel engineering components."
+        title: "Metal Storage Bin",
+        category: "Storage Bins",
+        image: "https://5.imimg.com/data5/ANDROID/Default/2022/4/WE/XJ/ZA/27161066/product-500x500.jpg",
+        description: "Durable industrial storage bin designed for heavy-duty applications and organized warehousing."
     },
     {
-        title: "MIG Heavy Assembly",
-        category: "Structural Fabrication",
-        image: "/images/structural_bg.png",
-        description: "High-power MIG welding for heavy structural seams and core machine frames."
+        title: "Component Storage Bins",
+        category: "Storage Bins",
+        image: "https://5.imimg.com/data5/ANDROID/Default/2022/4/UK/VM/WK/27161093/product-500x500.jpg",
+        description: "Wire mesh storage bins ideal for organizing and storing small to medium industrial components."
     },
     {
-        title: "Structural Frameworks",
-        category: "Industrial Fabrication",
-        image: "/images/3.jpeg",
-        description: "Large-scale industrial steel frameworks and customized factory structures."
+        title: "Industrial Safety Gates",
+        category: "Safety Systems",
+        image: "https://5.imimg.com/data5/ANDROID/Default/2022/4/RY/ZQ/ZE/27161080/product-500x500.jpg",
+        description: "Industrial-grade safety gates providing robust protection for machinery and restricted factory areas."
     },
     {
-        title: "Precision Sheet Metal",
-        category: "Custom Engineering",
-        image: "/images/4.jpeg",
-        description: "Intricate sheet metal fabrication and engineering job work."
+        title: "Precision MS Clamps",
+        category: "Clamps & Fixtures",
+        image: "https://4.imimg.com/data4/WA/XY/MY-271610/product-500x500.jpg",
+        description: "High-strength Mild Steel clamps used for securing industrial piping and structural frameworks."
     },
     {
-        title: "Conveyor Systems",
-        category: "Automation",
-        image: "/images/5.jpeg",
-        description: "Design and fabrication of durable automated conveyor systems."
+        title: "Industrial Work Table",
+        category: "Workplace Solutions",
+        image: "https://5.imimg.com/data5/ANDROID/Default/2022/4/WE/XJ/ZA/27161066/product-500x500.jpg", 
+        description: "Heavy-duty workbench engineered for durability in high-intensity industrial and engineering environments."
     },
     {
-        title: "Machine Foundations",
-        category: "SPM Specialist",
-        image: "/images/6.jpeg",
-        description: "Specialized manufacturing for machine foundations and special purpose machines."
+        title: "Electrical Control Panel",
+        category: "Control Systems",
+        image: "https://5.imimg.com/data5/ANDROID/Default/2022/4/UK/VM/WK/27161093/product-500x500.jpg",
+        description: "Custom-built electrical control panels designed for managing complex industrial power systems."
     },
     {
-        title: "Arc Welding Projects",
-        category: "Strength & Durability",
-        image: "/images/7.jpeg",
-        description: "High-strength Manual Metal Arc welding for durable industrial repairs."
+        title: "Precision Impellers",
+        category: "Mechanical Parts",
+        image: "https://5.imimg.com/data5/ANDROID/Default/2022/4/RY/ZQ/ZE/27161080/product-500x500.jpg",
+        description: "Precision-engineered impellers for industrial pumps and fans, ensuring optimal fluid dynamics."
     },
     {
-        title: "Industrial Enclosures",
-        category: "Sheet Metal",
-        image: "/images/8.jpeg",
-        description: "Customized industrial enclosures and cabinet fabrication."
+        title: "VCB Spare Parts",
+        category: "Electrical",
+        image: "https://4.imimg.com/data4/WA/XY/MY-271610/product-500x500.jpg",
+        description: "Essential components for Vacuum Circuit Breakers, ensuring reliability in high-voltage electrical panels."
     }
 ];
 
