@@ -41,14 +41,14 @@ const Products = () => {
           {products.map((product, index) => (
             <div key={index} className="col-lg-4" data-aos="fade-up" data-aos-delay={index * 150}>
               <div className="product-card h-100" style={{
-                background: 'var(--light-bg2)',
+                background: 'var(--light-bg)',
                 border: '1px solid var(--light-border)',
                 overflow: 'hidden',
                 transition: 'all 0.4s ease',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.03)'
+                boxShadow: '0 5px 15px rgba(0,0,0,0.02)'
               }}>
-                <div className="product-img-wrapper position-relative" style={{ height: '280px', overflow: 'hidden', background: '#000' }}>
-                    <img src={product.image} className="w-100 h-100 object-fit-cover opacity-60 transition-all duration-500" style={{ filter: 'grayscale(40%) brightness(0.8)' }} alt={product.title} />
+                <div className="product-img-wrapper position-relative" style={{ height: '280px', overflow: 'hidden', background: '#f8fafc' }}>
+                    <img src={product.image} className="w-100 h-100 object-fit-cover transition-all duration-500" style={{ opacity: 0.95 }} alt={product.title} />
                 </div>
                 <div className="product-content p-4">
                   <div className="d-flex align-items-center gap-2 mb-3">
@@ -73,8 +73,7 @@ const Products = () => {
         }
         .product-card:hover img {
            transform: scale(1.08);
-           filter: grayscale(10%) brightness(0.8) !important;
-           opacity: 0.7 !important;
+           opacity: 1 !important;
         }
       `}</style>
     </section>

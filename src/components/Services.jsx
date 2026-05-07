@@ -85,8 +85,8 @@ const Services = () => {
                 <h4 className="text-light text-uppercase mb-3" style={{ fontFamily: 'var(--font-heading)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.12em', wordSpacing: '0.08em' }}>{service.title}</h4>
                 <p className="text-light-muted mb-0" style={{ fontSize: '0.85rem', lineHeight: 1.8, opacity: 0.85, fontWeight: 300, fontFamily: 'var(--font-body)' }}>{service.desc}</p>
                 
-                <div className="mt-4 pt-4 border-top border-white/5 pb-2">
-                   <span className="text-accent text-uppercase" style={{ fontSize: '0.58rem', letterSpacing: '0.35em', fontFamily: 'var(--font-tag)', fontWeight: 200 }}>{service.tag}</span>
+                <div className="mt-4 pt-4 border-top pb-2" style={{ borderColor: 'var(--light-border)' }}>
+                   <span className="text-accent text-uppercase" style={{ fontSize: '0.58rem', letterSpacing: '0.35em', fontFamily: 'var(--font-tag)', fontWeight: 600 }}>{service.tag}</span>
                 </div>
               </div>
             </div>

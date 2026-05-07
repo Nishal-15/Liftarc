@@ -26,22 +26,22 @@ const About = () => {
                   background: 'linear-gradient(45deg, rgba(44, 93, 252, 0.1) 0%, transparent 60%)',
                   zIndex: 2
                 }}></div>
-                <img src="/images/about_bg.png" alt="Precision Detail" className="w-100 h-100 object-fit-cover opacity-50" style={{ mixBlendMode: 'luminosity' }} />
+                <img src="/images/about_bg.png" alt="Precision Detail" className="w-100 h-100 object-fit-cover" style={{ opacity: 0.9 }} />
                 {/* Large Number Overlay - Now Small in Corner */}
-                <div className="position-absolute text-dark opacity-10" style={{ top: '15px', right: '15px', fontFamily: 'var(--font-tag)', fontWeight: 600, fontSize: '1rem', letterSpacing: '0.2em', pointerEvents: 'none' }}>EST. 2016</div>
+                <div className="position-absolute text-dark" style={{ top: '15px', right: '15px', fontFamily: 'var(--font-tag)', fontWeight: 800, fontSize: '0.7rem', letterSpacing: '0.25em', pointerEvents: 'none', opacity: 0.8, backgroundColor: 'rgba(255,255,255,0.7)', padding: '6px 12px', zIndex: 10 }}>EST. 2016</div>
               </div>
 
               {/* Floating Cards */}
-              <div className="floating-card top-0 start-0 p-4 border translate-middle-x-lg translate-middle-y shadow-lg" style={{ minWidth: '220px', zIndex: 10, position: 'absolute', top: '10%', left: '-10%', backgroundColor: 'var(--light-bg)', border: '1px solid var(--light-border)', clipPath: 'polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%)' }}>
+              <div className="floating-card top-0 start-0 p-4 border translate-middle-x-lg translate-middle-y shadow-lg" style={{ minWidth: '220px', zIndex: 10, position: 'absolute', top: '10%', left: '-10%', backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid var(--light-border)', clipPath: 'polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%)' }}>
                  <div className="fs-1 fw-bold text-accent" style={{ fontFamily: 'var(--font-heading)' }}>01<span className="fs-5">ST</span></div>
-                 <div className="text-dark text-uppercase fw-bold" style={{ fontSize: '0.7rem', letterSpacing: '0.2em', fontFamily: 'var(--font-tag)' }}>Choice for Quality</div>
-                 <div className="text-dark small mt-1" style={{ opacity: 0.8, fontSize: '0.75rem', lineHeight: 1.5 }}>Certified structural welding & fabrication standards.</div>
+                 <div className="text-dark text-uppercase fw-black" style={{ fontSize: '0.72rem', letterSpacing: '0.22em', fontFamily: 'var(--font-tag)', opacity: 0.9 }}>Choice for Quality</div>
+                 <div className="text-dark mt-2" style={{ opacity: 0.9, fontSize: '0.8rem', lineHeight: 1.6, fontWeight: 500 }}>Certified structural welding & fabrication standards.</div>
               </div>
 
-              <div className="floating-card bottom-0 end-0 p-4 border translate-middle-x-lg translate-middle-y shadow-lg" style={{ minWidth: '220px', zIndex: 10, position: 'absolute', bottom: '10%', right: '-10%', backgroundColor: 'var(--light-bg)', border: '1px solid var(--light-border)', clipPath: 'polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%)' }}>
+              <div className="floating-card bottom-0 end-0 p-4 border translate-middle-x-lg translate-middle-y shadow-lg" style={{ minWidth: '220px', zIndex: 10, position: 'absolute', bottom: '10%', right: '-10%', backgroundColor: 'rgba(255, 255, 255, 0.95)', border: '1px solid var(--light-border)', clipPath: 'polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%)' }}>
                  <div className="fs-1 fw-bold text-accent" style={{ fontFamily: 'var(--font-heading)' }}>9+</div>
-                 <div className="text-dark text-uppercase fw-bold" style={{ fontSize: '0.7rem', letterSpacing: '0.2em', fontFamily: 'var(--font-tag)' }}>Years in Operation</div>
-                 <div className="text-dark small mt-1" style={{ opacity: 0.8, fontSize: '0.75rem', lineHeight: 1.5 }}>Providing certified industrial solutions and full quality reports.</div>
+                 <div className="text-dark text-uppercase fw-black" style={{ fontSize: '0.72rem', letterSpacing: '0.22em', fontFamily: 'var(--font-tag)', opacity: 0.9 }}>Years in Operation</div>
+                 <div className="text-dark mt-2" style={{ opacity: 0.9, fontSize: '0.8rem', lineHeight: 1.6, fontWeight: 500 }}>Providing certified industrial solutions and full quality reports.</div>
               </div>
             </div>
           </div>

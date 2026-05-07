@@ -165,7 +165,11 @@ p {
 }
 
 .text-light-muted {
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.light-theme .text-light-muted {
+  color: var(--light-text-muted) !important;
 }
 
 /* Buttons */
@@ -208,17 +212,22 @@ p {
   font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.28em;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
   word-spacing: 0.15em;
 }
 
+.light-theme .btn-outline-custom {
+  color: var(--light-text) !important;
+  border-color: var(--light-text) !important;
+}
+
 .btn-outline-custom:hover {
-  border-color: var(--accent2);
+  border-color: var(--accent);
   color: #fff;
-  background: var(--accent2);
+  background: var(--accent);
   transform: translateY(-2px);
 }
 

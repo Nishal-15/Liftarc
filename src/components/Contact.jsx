@@ -151,11 +151,11 @@ const Contact = () => {
             </div>
             <style>{`
                 .form-control::placeholder {
-                    color: rgba(255, 255, 255, 0.5) !important;
+                    color: rgba(12, 74, 110, 0.6) !important;
                     opacity: 1;
                 }
                 .form-select {
-                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%230c4a6e' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
                 }
             `}</style>
         </section>
