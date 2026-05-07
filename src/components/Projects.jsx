@@ -5,7 +5,7 @@ const projects = [
     {
         title: "Metal Storage Bin",
         category: "Storage Bins",
-        image: "https://5.imimg.com/data5/ANDROID/Default/2022/4/WE/XJ/ZA/27161066/product-500x500.jpg",
+        image: "/images/7.jpeg",
         description: "Durable industrial storage bin designed for heavy-duty applications and organized warehousing."
     },
     {
@@ -17,7 +17,7 @@ const projects = [
     {
         title: "Industrial Safety Gates",
         category: "Safety Systems",
-        image: "https://5.imimg.com/data5/ANDROID/Default/2022/4/RY/ZQ/ZE/27161080/product-500x500.jpg",
+        image: "/images/8.jpeg",
         description: "Robust industrial-grade safety gates providing critical protection for restricted factory zones."
     },
     {
@@ -29,13 +29,13 @@ const projects = [
     {
         title: "Component Storage Bins",
         category: "Storage Bins",
-        image: "https://5.imimg.com/data5/ANDROID/Default/2022/4/UK/VM/WK/27161093/product-500x500.jpg",
+        image: "/images/9.jpeg",
         description: "Organized storage solutions for small to medium-sized industrial components and hardware."
     },
     {
         title: "Precision MS Clamps",
         category: "Clamps & Fixtures",
-        image: "https://4.imimg.com/data4/WA/XY/MY-271610/product-500x500.jpg",
+        image: "/images/10.jpeg",
         description: "High-strength Mild Steel clamps designed for heavy-duty industrial fastening and structural support."
     },
     {
