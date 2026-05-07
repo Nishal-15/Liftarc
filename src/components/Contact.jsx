@@ -148,6 +148,23 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* Interactive Map Row */}
+                <div className="row mt-5 pt-lg-5" data-aos="fade-up">
+                    <div className="col-12">
+                        <div className="map-container shadow-sm border" style={{ height: '400px', backgroundColor: 'var(--light-bg)', border: '1px solid var(--light-border)', overflow: 'hidden' }}>
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125322.44153139368!2d76.88483259461142!3d11.01201452399201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1714987654321!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="100%" 
+                                style={{ border: 0, filter: 'grayscale(10%) contrast(1.1) brightness(0.95)' }} 
+                                allowFullScreen="" 
+                                loading="lazy" 
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
             </div>
             <style>{`
                 .form-control::placeholder {

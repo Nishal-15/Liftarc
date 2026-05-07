@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const projects = [
     {
@@ -52,6 +53,13 @@ const projects = [
 ];
 
 const Projects = () => {
+    const [filter, setFilter] = React.useState('All');
+    const categories = ['All', ...new Set(projects.map(p => p.category))];
+    
+    const filteredProjects = filter === 'All' 
+        ? projects 
+        : projects.filter(p => p.category === filter);
+
     return (
         <section id="projects" className="light-theme" style={{ backgroundColor: 'var(--light-bg2)' }}>
             <div className="container">
@@ -61,13 +69,53 @@ const Projects = () => {
                         <h2 className="section-title">INDUSTRIAL <span className="text-accent" style={{ fontStyle: 'italic', fontFamily: 'var(--font-heading)' }}>PROJECTS</span></h2>
                     </div>
                     <div className="col-lg-6 text-lg-end" data-aos="fade-left">
-                        <p className="text-light text-uppercase" style={{ fontSize: '0.6rem', letterSpacing: '0.38em', opacity: 1, fontFamily: 'var(--font-tag)', fontWeight: 600, color: 'var(--light-text)' }}>Quality Excellence in Every Build</p>
+                        <div className="d-flex flex-wrap justify-content-lg-end gap-3 mt-4 mt-lg-0">
+                            {categories.map((cat) => (
+                                <button 
+                                    key={cat}
+                                    onClick={() => setFilter(cat)}
+                                    className={`filter-btn ${filter === cat ? 'active' : ''}`}
+                                    style={{
+                                        background: 'transparent',
+                                        border: 'none',
+                                        color: filter === cat ? 'var(--accent)' : 'var(--light-text)',
+                                        fontFamily: 'var(--font-tag)',
+                                        fontSize: '0.65rem',
+                                        letterSpacing: '0.2em',
+                                        textTransform: 'uppercase',
+                                        padding: '5px 10px',
+                                        position: 'relative',
+                                        transition: 'all 0.3s ease',
+                                        fontWeight: filter === cat ? '700' : '400',
+                                        opacity: filter === cat ? 1 : 0.6
+                                    }}
+                                >
+                                    {cat}
+                                    {filter === cat && (
+                                        <motion.div 
+                                            layoutId="activeFilter"
+                                            className="position-absolute bottom-0 start-0 w-100" 
+                                            style={{ height: '2px', backgroundColor: 'var(--accent)' }}
+                                        />
+                                    )}
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
                 <div className="row g-2">
-                    {projects.map((project, index) => (
-                        <div key={index} className="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay={index * 100}>
+                    <AnimatePresence mode="popLayout">
+                        {filteredProjects.map((project, index) => (
+                            <motion.div 
+                                layout
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.9 }}
+                                transition={{ duration: 0.4 }}
+                                key={project.title} 
+                                className="col-md-6 col-lg-3"
+                            >
                             <div className="project-item position-relative overflow-hidden" style={{ height: '400px', cursor: 'pointer' }}>
                                 <img src={project.image} alt={project.title} className="w-100 h-100 object-fit-cover transition-all duration-700" style={{ filter: 'grayscale(100%) brightness(0.5)' }} />
                                 <div className="project-overlay position-absolute top-0 start-0 w-100 h-100 p-4 d-flex flex-column justify-content-end" style={{ 
@@ -81,8 +129,9 @@ const Projects = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
+                </AnimatePresence>
                 </div>
             </div>
 

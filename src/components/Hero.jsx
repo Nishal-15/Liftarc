@@ -1,5 +1,17 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, useMotionValue, useSpring, useTransform, animate } from 'framer-motion';
+
+const Counter = ({ value, duration = 2 }) => {
+    const count = useMotionValue(0);
+    const rounded = useTransform(count, (latest) => Math.round(latest));
+
+    useEffect(() => {
+        const controls = animate(count, value, { duration });
+        return controls.stop;
+    }, [value, duration]);
+
+    return <motion.span>{rounded}</motion.span>;
+};
 
 const Hero = () => {
   return (
@@ -90,15 +102,15 @@ const Hero = () => {
       {/* Stats Quick Grid */}
       <div className="position-absolute d-none d-lg-flex" style={{ bottom: '80px', right: '5%', gap: '60px', zIndex: 10 }}>
         <div className="text-end" data-aos="fade-in" data-aos-delay="2200">
-          <div className="fs-1 text-light" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontWeight: 900, lineHeight: 1, fontSize: '3rem' }}>500<span style={{ fontStyle: 'normal', color: '#00AEEF' }}>+</span></div>
+          <div className="fs-1 text-light" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontWeight: 900, lineHeight: 1, fontSize: '3rem' }}><Counter value={500} /><span style={{ fontStyle: 'normal', color: '#00AEEF' }}>+</span></div>
           <div className="text-light text-uppercase" style={{ fontSize: '0.58rem', letterSpacing: '0.35em', marginTop: '8px', opacity: 0.7, fontFamily: 'var(--font-tag)', fontWeight: 200 }}>Projects Delivered</div>
         </div>
         <div className="text-end" data-aos="fade-in" data-aos-delay="2400">
-          <div className="fs-1 text-light" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontWeight: 900, lineHeight: 1, fontSize: '3rem' }}>9<span style={{ fontStyle: 'normal', color: '#00AEEF' }}>+</span></div>
+          <div className="fs-1 text-light" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontWeight: 900, lineHeight: 1, fontSize: '3rem' }}><Counter value={9} /><span style={{ fontStyle: 'normal', color: '#00AEEF' }}>+</span></div>
           <div className="text-light text-uppercase" style={{ fontSize: '0.58rem', letterSpacing: '0.35em', marginTop: '8px', opacity: 0.7, fontFamily: 'var(--font-tag)', fontWeight: 200 }}>Years Expertise</div>
         </div>
         <div className="text-end" data-aos="fade-in" data-aos-delay="2600">
-          <div className="fs-1 text-light" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontWeight: 900, lineHeight: 1, fontSize: '3rem' }}>98<span style={{ fontStyle: 'normal', color: '#00AEEF' }}>%</span></div>
+          <div className="fs-1 text-light" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontWeight: 900, lineHeight: 1, fontSize: '3rem' }}><Counter value={98} /><span style={{ fontStyle: 'normal', color: '#00AEEF' }}>%</span></div>
           <div className="text-light text-uppercase" style={{ fontSize: '0.58rem', letterSpacing: '0.35em', marginTop: '8px', opacity: 0.7, fontFamily: 'var(--font-tag)', fontWeight: 200 }}>Client Loyalty</div>
         </div>
       </div>
