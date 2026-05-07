@@ -9,46 +9,70 @@ const projects = [
         description: "Durable industrial storage bin designed for heavy-duty applications and organized warehousing."
     },
     {
-        title: "Component Storage Bins",
-        category: "Storage Bins",
-        image: "https://5.imimg.com/data5/ANDROID/Default/2022/4/UK/VM/WK/27161093/product-500x500.jpg",
-        description: "Wire mesh storage bins ideal for organizing and storing small to medium industrial components."
+        title: "Heavy Structural Seams",
+        category: "Structural Fabrication",
+        image: "/images/structural_bg.png",
+        description: "Large-scale structural steel frameworks engineered for maximum load-bearing capacity."
     },
     {
         title: "Industrial Safety Gates",
         category: "Safety Systems",
         image: "https://5.imimg.com/data5/ANDROID/Default/2022/4/RY/ZQ/ZE/27161080/product-500x500.jpg",
-        description: "Industrial-grade safety gates providing robust protection for machinery and restricted factory areas."
+        description: "Robust industrial-grade safety gates providing critical protection for restricted factory zones."
+    },
+    {
+        title: "Clean-Arc TIG Welding",
+        category: "Precision Welding",
+        image: "/images/mig_bg.png",
+        description: "High-precision TIG welding for clean, high-strength joints in stainless steel assemblies."
+    },
+    {
+        title: "Component Storage Bins",
+        category: "Storage Bins",
+        image: "https://5.imimg.com/data5/ANDROID/Default/2022/4/UK/VM/WK/27161093/product-500x500.jpg",
+        description: "Organized storage solutions for small to medium-sized industrial components and hardware."
     },
     {
         title: "Precision MS Clamps",
         category: "Clamps & Fixtures",
         image: "https://4.imimg.com/data4/WA/XY/MY-271610/product-500x500.jpg",
-        description: "High-strength Mild Steel clamps used for securing industrial piping and structural frameworks."
+        description: "High-strength Mild Steel clamps designed for heavy-duty industrial fastening and structural support."
     },
     {
         title: "Industrial Work Table",
         category: "Workplace Solutions",
-        image: "https://5.imimg.com/data5/ANDROID/Default/2022/4/WE/XJ/ZA/27161066/product-500x500.jpg", 
-        description: "Heavy-duty workbench engineered for durability in high-intensity industrial and engineering environments."
+        image: "/images/1.jpeg", 
+        description: "Sturdy, ergonomic workbenches built to withstand high-intensity engineering environments."
     },
     {
         title: "Electrical Control Panel",
         category: "Control Systems",
-        image: "https://5.imimg.com/data5/ANDROID/Default/2022/4/UK/VM/WK/27161093/product-500x500.jpg",
-        description: "Custom-built electrical control panels designed for managing complex industrial power systems."
+        image: "/images/2.jpeg",
+        description: "Custom-engineered electrical control panels for complex power management systems."
     },
     {
         title: "Precision Impellers",
         category: "Mechanical Parts",
-        image: "https://5.imimg.com/data5/ANDROID/Default/2022/4/RY/ZQ/ZE/27161080/product-500x500.jpg",
-        description: "Precision-engineered impellers for industrial pumps and fans, ensuring optimal fluid dynamics."
+        image: "/images/3.jpeg",
+        description: "Advanced mechanical impellers manufactured for superior fluid dynamics in industrial pumps."
     },
     {
         title: "VCB Spare Parts",
         category: "Electrical",
-        image: "https://4.imimg.com/data4/WA/XY/MY-271610/product-500x500.jpg",
-        description: "Essential components for Vacuum Circuit Breakers, ensuring reliability in high-voltage electrical panels."
+        image: "/images/4.jpeg",
+        description: "Essential high-voltage components for Vacuum Circuit Breakers and industrial switchgear."
+    },
+    {
+        title: "Sheet Metal Assembly",
+        category: "Precision Engineering",
+        image: "/images/5.jpeg",
+        description: "Intricate sheet metal fabrication including high-precision bending and structural assembly."
+    },
+    {
+        title: "Custom Machine Frame",
+        category: "SPM Specialist",
+        image: "/images/6.jpeg",
+        description: "Bespoke structural foundations for Special Purpose Machines and industrial equipment."
     }
 ];
 
