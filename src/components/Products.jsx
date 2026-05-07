@@ -23,7 +23,7 @@ const products = [
 
 const Products = () => {
   return (
-    <section id="products" style={{ backgroundColor: 'var(--dark)', position: 'relative' }}>
+    <section id="products" className="light-theme" style={{ backgroundColor: 'var(--light-bg)', position: 'relative' }}>
       <div className="container">
         <div className="row align-items-end mb-60">
           <div className="col-lg-6" data-aos="fade-right">
@@ -41,13 +41,14 @@ const Products = () => {
           {products.map((product, index) => (
             <div key={index} className="col-lg-4" data-aos="fade-up" data-aos-delay={index * 150}>
               <div className="product-card h-100" style={{
-                background: 'var(--dark2)',
-                border: '1px solid rgba(255, 255, 255, 0.05)',
+                background: 'var(--light-bg2)',
+                border: '1px solid var(--light-border)',
                 overflow: 'hidden',
-                transition: 'all 0.4s ease'
+                transition: 'all 0.4s ease',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.03)'
               }}>
-                <div className="product-img-wrapper position-relative" style={{ height: '280px', overflow: 'hidden' }}>
-                    <img src={product.image} className="w-100 h-100 object-fit-cover opacity-50 transition-all duration-500" style={{ filter: 'grayscale(60%) brightness(0.6)' }} alt={product.title} />
+                <div className="product-img-wrapper position-relative" style={{ height: '280px', overflow: 'hidden', background: '#000' }}>
+                    <img src={product.image} className="w-100 h-100 object-fit-cover opacity-60 transition-all duration-500" style={{ filter: 'grayscale(40%) brightness(0.8)' }} alt={product.title} />
                 </div>
                 <div className="product-content p-4">
                   <div className="d-flex align-items-center gap-2 mb-3">
@@ -65,9 +66,10 @@ const Products = () => {
 
       <style>{`
         .product-card:hover {
-          background-color: var(--dark3) !important;
-          border-color: var(--accent2) !important;
+          background-color: var(--light-bg) !important;
+          border-color: var(--accent) !important;
           transform: translateY(-5px);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
         }
         .product-card:hover img {
            transform: scale(1.08);

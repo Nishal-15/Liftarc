@@ -35,7 +35,7 @@ function AccuracyIcon() {
 
 const WhyChooseUs = () => {
   return (
-    <section id="whychooseus" style={{ backgroundColor: 'var(--dark2)' }}>
+    <section id="whychooseus" className="light-theme" style={{ backgroundColor: 'var(--light-bg)' }}>
       <div className="container">
         <div className="row g-5 align-items-center">
           <div className="col-lg-5" data-aos="fade-right">
@@ -44,7 +44,7 @@ const WhyChooseUs = () => {
              <p className="text-light mt-4" style={{ opacity: 0.85, fontSize: '1rem', lineHeight: 1.95, fontWeight: 300, fontFamily: 'var(--font-body)' }}>
                 Driven by precision and quality, we partner with manufacturers across Coimbatore to help them achieve their production goals through reliable structural and mechanical engineering.
              </p>
-             <div className="accent-quote p-4" style={{ backgroundColor: 'var(--dark3)', borderLeft: '4px solid var(--accent)', position: 'relative' }}>
+             <div className="accent-quote p-4" style={{ backgroundColor: 'var(--light-bg3)', borderLeft: '4px solid var(--accent)', position: 'relative' }}>
                  <p className="text-light fst-italic mb-0" style={{ fontSize: '0.95rem', lineHeight: 1.7, opacity: 0.7, fontFamily: 'var(--font-heading)' }}>
                     "Our mission is to bridge the gap between complex engineering challenges and durable, cost-effective fabrication solutions."
                  </p>
@@ -56,9 +56,9 @@ const WhyChooseUs = () => {
             <div className="row g-4">
                {reasons.map((reason, index) => (
                  <div key={index} className="col-md-12" data-aos="fade-left" data-aos-delay={index * 150}>
-                   <div className="reason-item d-flex gap-4 p-4" style={{ 
-                     backgroundColor: '#161616', 
-                     border: '1px solid rgba(255, 255, 255, 0.03)',
+                   <div className="reason-item d-flex gap-4 p-4 shadow-sm" style={{ 
+                     backgroundColor: 'var(--light-bg2)', 
+                     border: '1px solid var(--light-border)',
                      transition: 'all 0.3s ease'
                    }}>
                      <div className="flex-shrink-0 mt-1">
@@ -78,9 +78,10 @@ const WhyChooseUs = () => {
 
       <style>{`
           .reason-item:hover {
-            background-color: var(--dark) !important;
-            border-color: var(--accent2) !important;
+            background-color: var(--light-bg) !important;
+            border-color: var(--accent) !important;
             transform: translateX(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
           }
       `}</style>
     </section>

@@ -53,7 +53,7 @@ const projects = [
 
 const Projects = () => {
     return (
-        <section id="projects" style={{ backgroundColor: 'var(--dark)' }}>
+        <section id="projects" className="light-theme" style={{ backgroundColor: 'var(--light-bg2)' }}>
             <div className="container">
                 <div className="row mb-5 align-items-end">
                     <div className="col-lg-6" data-aos="fade-right">
@@ -71,7 +71,7 @@ const Projects = () => {
                             <div className="project-item position-relative overflow-hidden" style={{ height: '400px', cursor: 'pointer' }}>
                                 <img src={project.image} alt={project.title} className="w-100 h-100 object-fit-cover transition-all duration-700" style={{ filter: 'grayscale(100%) brightness(0.5)' }} />
                                 <div className="project-overlay position-absolute top-0 start-0 w-100 h-100 p-4 d-flex flex-column justify-content-end" style={{ 
-                                    background: 'linear-gradient(to top, rgba(15,23,42,0.9) 0%, transparent 100%)',
+                                    background: 'linear-gradient(to top, rgba(15,23,42,0.85) 0%, transparent 60%)',
                                     transition: 'background 0.4s ease'
                                 }}>
                                     <span className="text-accent text-uppercase mb-1" style={{ fontSize: '0.55rem', letterSpacing: '0.3em', fontFamily: 'var(--font-tag)', fontWeight: 200 }}>{project.category}</span>

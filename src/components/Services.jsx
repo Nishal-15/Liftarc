@@ -43,7 +43,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="" style={{ backgroundColor: 'var(--dark)', overflow: 'hidden' }}>
+    <section id="services" className="light-theme" style={{ backgroundColor: 'var(--light-bg2)', overflow: 'hidden' }}>
       <div className="container">
         <div className="row justify-content-center mb-5 pb-lg-4">
           <div className="col-lg-7 text-center" data-aos="fade-up">
@@ -57,17 +57,18 @@ const Services = () => {
           {services.map((service, index) => (
             <div key={index} className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay={index * 100}>
               <div className="service-card p-5 h-100" style={{
-                backgroundColor: 'var(--dark2)',
-                border: '1px solid rgba(255, 255, 255, 0.05)',
+                backgroundColor: 'var(--light-bg)',
+                border: '1px solid var(--light-border)',
                 position: 'relative',
                 overflow: 'hidden',
                 transition: 'all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)',
                 display: 'flex',
                 flexDirection: 'column',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.03)'
               }}>
                 {/* Large Background Transparent Number */}
-                <div className="position-absolute text-light opacity-5" style={{ bottom: '20px', right: '30px', fontFamily: 'var(--font-display)', fontStyle: 'italic', fontWeight: 400, fontSize: '5rem', pointerEvents: 'none' }}>0{index + 1}</div>
+                <div className="position-absolute text-dark opacity-5" style={{ bottom: '20px', right: '30px', fontFamily: 'var(--font-display)', fontStyle: 'italic', fontWeight: 400, fontSize: '5rem', pointerEvents: 'none' }}>0{index + 1}</div>
                 
                 {/* Top Border Glow (Pseudo) */}
                 <div className="accent-line position-absolute top-0 start-0 w-0 h-2" style={{ transition: 'width 0.5s ease', width: '0%', height: '2px', backgroundColor: 'var(--accent)' }}></div>
@@ -95,9 +96,10 @@ const Services = () => {
 
       <style>{`
         .service-card:hover {
-          background-color: var(--dark3) !important;
-          border-color: rgba(138, 3, 3, 0.3) !important;
+          background-color: var(--light-bg) !important;
+          border-color: var(--accent) !important;
           transform: translateY(-8px);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.08) !important;
         }
         .service-card:hover .accent-line {
           width: 100% !important;

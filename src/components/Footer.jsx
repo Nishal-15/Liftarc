@@ -3,7 +3,7 @@ import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
     return (
-        <footer className="py-5" style={{ backgroundColor: '#020617', borderTop: '1px solid rgba(255, 255, 255, 0.05)' }}>
+        <footer className="py-5 light-theme" style={{ backgroundColor: 'var(--light-bg3)', borderTop: '1px solid var(--light-border)' }}>
             <div className="container">
                 <div className="row g-4 align-items-center">
                     <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">

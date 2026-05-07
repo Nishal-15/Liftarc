@@ -18,6 +18,47 @@
   --font-body: 'Raleway', sans-serif;
   --font-tag: 'Josefin Sans', sans-serif;
   --font-mono: 'Share Tech Mono', monospace;
+
+  /* Light Theme Variables */
+  --light-bg: #ffffff;
+  --light-bg2: #f8fafc;
+  --light-bg3: #f1f5f9;
+  --light-text: #0f172a;
+  --light-text-muted: #475569;
+  --light-border: rgba(15, 23, 42, 0.08);
+}
+
+.light-theme {
+  background-color: var(--light-bg) !important;
+  color: var(--light-text) !important;
+}
+
+.light-theme .section-title, 
+.light-theme h2, 
+.light-theme h3, 
+.light-theme h4, 
+.light-theme h5 {
+  color: var(--light-text) !important;
+}
+
+.light-theme p, 
+.light-theme .text-light-muted {
+  color: var(--light-text-muted) !important;
+  opacity: 1 !important;
+}
+
+.light-theme .text-light {
+  color: var(--light-text) !important;
+  opacity: 1 !important;
+}
+
+.light-theme .bg-dark,
+.light-theme .bg-dark2 {
+  background-color: var(--light-bg2) !important;
+}
+
+.light-theme .border {
+  border-color: var(--light-border) !important;
 }
 
 * {
