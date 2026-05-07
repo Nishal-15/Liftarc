@@ -58,10 +58,10 @@ const Projects = () => {
                 <div className="row mb-5 align-items-end">
                     <div className="col-lg-6" data-aos="fade-right">
                         <span className="section-tag">OUR PORTFOLIO</span>
-                        <h2 className="section-title">INDUSTRIAL <span className="text-accent">PROJECTS</span></h2>
+                        <h2 className="section-title">INDUSTRIAL <span className="text-accent" style={{ fontStyle: 'italic', fontFamily: 'var(--font-heading)' }}>PROJECTS</span></h2>
                     </div>
                     <div className="col-lg-6 text-lg-end" data-aos="fade-left">
-                        <p className="text-light small text-uppercase fw-bold" style={{ letterSpacing: '0.2rem', opacity: 0.8 }}>Quality Excellence in Every Build</p>
+                        <p className="text-light text-uppercase" style={{ fontSize: '0.58rem', letterSpacing: '0.35em', opacity: 0.7, fontFamily: 'var(--font-tag)', fontWeight: 200 }}>Quality Excellence in Every Build</p>
                     </div>
                 </div>
 
@@ -74,9 +74,9 @@ const Projects = () => {
                                     background: 'linear-gradient(to top, rgba(15,23,42,0.9) 0%, transparent 100%)',
                                     transition: 'background 0.4s ease'
                                 }}>
-                                    <span className="text-accent fw-bold text-uppercase mb-1" style={{ fontSize: '0.65rem', letterSpacing: '0.2em' }}>{project.category}</span>
-                                    <h4 className="text-light fw-black text-uppercase m-0" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem' }}>{project.title}</h4>
-                                    <div className="project-desc mt-3 text-muted small" style={{ maxHeight: '0', overflow: 'hidden', transition: 'max-height 0.4s ease, opacity 0.4s ease', opacity: 0 }}>
+                                    <span className="text-accent text-uppercase mb-1" style={{ fontSize: '0.55rem', letterSpacing: '0.3em', fontFamily: 'var(--font-tag)', fontWeight: 200 }}>{project.category}</span>
+                                    <h4 className="text-light text-uppercase m-0" style={{ fontFamily: 'var(--font-heading)', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.1em' }}>{project.title}</h4>
+                                    <div className="project-desc mt-3 text-light" style={{ maxHeight: '0', overflow: 'hidden', transition: 'max-height 0.4s ease, opacity 0.4s ease', opacity: 0, fontSize: '0.75rem', fontWeight: 300, fontFamily: 'var(--font-body)', lineHeight: 1.6 }}>
                                         {project.description}
                                     </div>
                                 </div>

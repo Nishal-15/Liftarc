@@ -71,13 +71,15 @@ const Navbar = () => {
                         {navLinks.map((link) => (
                             <li key={link.name} className="nav-item">
                                 <a 
-                                    className="nav-link text-uppercase fw-bold px-0 py-2 position-relative custom-nav-link" 
+                                    className="nav-link text-uppercase px-0 py-2 position-relative custom-nav-link" 
                                     href={link.href}
                                     style={{ 
                                         color: '#ffffff', 
-                                        fontSize: '0.85rem', 
-                                        letterSpacing: '0.15em', 
-                                        opacity: 0.85
+                                        fontSize: '0.65rem', 
+                                        letterSpacing: '0.28em', 
+                                        opacity: 0.8,
+                                        fontFamily: 'var(--font-tag)',
+                                        fontWeight: 600
                                     }}
                                 >
                                     {link.name}
@@ -89,9 +91,9 @@ const Navbar = () => {
                                 className="btn-primary-custom" 
                                 href="#contact" 
                                 style={{ 
-                                    fontSize: '0.8rem', 
-                                    padding: '12px 28px', 
-                                    clipPath: 'polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%)' 
+                                    fontSize: '0.62rem', 
+                                    padding: '12px 24px', 
+                                    letterSpacing: '0.2em'
                                 }}
                             >
                                 Get a Quote
@@ -131,15 +133,16 @@ const Navbar = () => {
                                         <a 
                                             href={link.href}
                                             onClick={() => setIsMenuOpen(false)}
-                                            className="text-light text-decoration-none d-flex align-items-center justify-content-between text-uppercase fw-black"
+                                            className="text-light text-decoration-none d-flex align-items-center justify-content-between text-uppercase"
                                             style={{ 
-                                                fontSize: '1.8rem', 
+                                                fontSize: '1.4rem', 
                                                 fontFamily: 'var(--font-heading)',
-                                                letterSpacing: '0.05em' 
+                                                letterSpacing: '0.1em',
+                                                fontWeight: 600
                                             }}
                                         >
                                             {link.name}
-                                            <ChevronRight className="text-accent" />
+                                            <ChevronRight className="text-accent" size={20} />
                                         </a>
                                     </motion.li>
                                 ))}
@@ -153,7 +156,7 @@ const Navbar = () => {
                                         href="#contact" 
                                         onClick={() => setIsMenuOpen(false)}
                                         className="btn-primary-custom w-100 justify-content-center py-3"
-                                        style={{ fontSize: '1.2rem' }}
+                                        style={{ fontSize: '0.75rem', letterSpacing: '0.25em' }}
                                     >
                                         REQUEST QUOTE
                                     </a>

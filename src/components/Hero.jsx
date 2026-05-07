@@ -32,21 +32,21 @@ const Hero = () => {
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.7, duration: 1.2, ease: "easeOut" }}
-              className="display-1 fw-black text-light mb-4" 
-              style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(3rem, 10vw, 7rem)', fontWeight: 900, lineHeight: 0.95, letterSpacing: '-0.02em' }}
+              className="display-1 fw-bold text-light mb-4" 
+              style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(3rem, 10vw, 6.5rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '0.02em' }}
             >
               LIFT ARC<br/>
-              <span className="text-accent">INDUSTRIES.</span> <br/>
-              <span className="fs-1 fw-bold opacity-75 d-block mt-3" style={{ fontSize: '2.5rem', letterSpacing: '0.15em', color: 'var(--logo-green)' }}>PRECISION FABRICATION.</span>
+              <span className="text-accent" style={{ fontStyle: 'italic', fontFamily: 'var(--font-heading)' }}>INDUSTRIES.</span> <br/>
+              <span className="fs-1 fw-bold opacity-75 d-block mt-3" style={{ fontSize: '2.2rem', letterSpacing: '0.15em', color: 'var(--logo-green)', fontFamily: 'var(--font-tag)', fontWeight: 200 }}>PRECISION FABRICATION.</span>
             </motion.h1>
-            <p className="text-accent small fw-bold text-uppercase mt-n3 mb-4 letter-spacing-widest" style={{ letterSpacing: '0.2em', opacity: 0.9 }}>"Crafted with precision, built with passion"</p>
+            <p className="text-accent small text-uppercase mt-n3 mb-4" style={{ fontFamily: 'var(--font-tag)', letterSpacing: '0.45em', opacity: 0.9, fontSize: '0.65rem', fontWeight: 200 }}>"Crafted with precision, built with passion"</p>
 
             <motion.p 
               initial={{ opacity: 0 }}
-              animate={{ opacity: 0.6 }}
+              animate={{ opacity: 0.8 }}
               transition={{ delay: 1.5, duration: 1.5 }}
-              className="fs-5 fw-light text-light mb-5 ps-2 border-start border-accent py-2" 
-              style={{ maxWidth: '550px', lineHeight: 1.8 }}
+              className="fs-6 text-light mb-5 ps-3 border-start border-accent py-2" 
+              style={{ maxWidth: '550px', lineHeight: 2.0, fontFamily: 'var(--font-body)', fontWeight: 300 }}
             >
               Engineering next-generation structural solutions with high-precision TIG/MIG welding, specialized SPM fabrication, and advanced industrial job-work for global manufacturing standards.
             </motion.p>
@@ -71,16 +71,18 @@ const Hero = () => {
 
       {/* Decorative Large Background Text/Number */}
       <div className="hero-number position-absolute" style={{
-        fontFamily: 'var(--font-heading)',
-        fontSize: '35vw',
-        fontWeight: 900,
+        fontFamily: 'var(--font-display)',
+        fontStyle: 'italic',
+        fontSize: '30vw',
+        fontWeight: 400,
         color: 'rgba(255, 255, 255, 0.015)',
         right: '-10%',
         bottom: '-10%',
         lineHeight: 1,
         pointerEvents: 'none',
         userSelect: 'none',
-        zIndex: 0
+        zIndex: 0,
+        letterSpacing: '0.05em'
       }}>
         ARC
       </div>
@@ -88,16 +90,16 @@ const Hero = () => {
       {/* Stats Quick Grid */}
       <div className="position-absolute d-none d-lg-flex" style={{ bottom: '80px', right: '5%', gap: '60px', zIndex: 10 }}>
         <div className="text-end" data-aos="fade-in" data-aos-delay="2200">
-          <div className="fs-1 fw-black text-light" style={{ fontFamily: 'var(--font-heading)', lineHeight: 1 }}>500<span className="text-accent">+</span></div>
-          <div className="text-light text-uppercase fw-bold" style={{ fontSize: '0.65rem', letterSpacing: '0.3em', marginTop: '5px', opacity: 0.8 }}>Projects Delivered</div>
+          <div className="fs-1 text-light" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontWeight: 900, lineHeight: 1, fontSize: '3rem' }}>500<span className="text-accent" style={{ fontStyle: 'normal' }}>+</span></div>
+          <div className="text-light text-uppercase" style={{ fontSize: '0.58rem', letterSpacing: '0.35em', marginTop: '8px', opacity: 0.7, fontFamily: 'var(--font-tag)', fontWeight: 200 }}>Projects Delivered</div>
         </div>
         <div className="text-end" data-aos="fade-in" data-aos-delay="2400">
-          <div className="fs-1 fw-black text-light" style={{ fontFamily: 'var(--font-heading)', lineHeight: 1 }}>9<span className="text-accent">+</span></div>
-          <div className="text-light text-uppercase fw-bold" style={{ fontSize: '0.65rem', letterSpacing: '0.3em', marginTop: '5px', opacity: 0.8 }}>Years Expertise</div>
+          <div className="fs-1 text-light" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontWeight: 900, lineHeight: 1, fontSize: '3rem' }}>9<span className="text-accent" style={{ fontStyle: 'normal' }}>+</span></div>
+          <div className="text-light text-uppercase" style={{ fontSize: '0.58rem', letterSpacing: '0.35em', marginTop: '8px', opacity: 0.7, fontFamily: 'var(--font-tag)', fontWeight: 200 }}>Years Expertise</div>
         </div>
         <div className="text-end" data-aos="fade-in" data-aos-delay="2600">
-          <div className="fs-1 fw-black text-light" style={{ fontFamily: 'var(--font-heading)', lineHeight: 1 }}>98<span className="text-accent">%</span></div>
-          <div className="text-light text-uppercase fw-bold" style={{ fontSize: '0.65rem', letterSpacing: '0.3em', marginTop: '5px', opacity: 0.8 }}>Client Loyalty</div>
+          <div className="fs-1 text-light" style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontWeight: 900, lineHeight: 1, fontSize: '3rem' }}>98<span className="text-accent" style={{ fontStyle: 'normal' }}>%</span></div>
+          <div className="text-light text-uppercase" style={{ fontSize: '0.58rem', letterSpacing: '0.35em', marginTop: '8px', opacity: 0.7, fontFamily: 'var(--font-tag)', fontWeight: 200 }}>Client Loyalty</div>
         </div>
       </div>
 

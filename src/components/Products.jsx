@@ -28,10 +28,10 @@ const Products = () => {
         <div className="row align-items-end mb-60">
           <div className="col-lg-6" data-aos="fade-right">
             <span className="section-tag">ENGINEERING HARDWARE</span>
-            <h2 className="section-title" style={{ color: 'var(--light)' }}>INDUSTRIAL <span className="text-accent">PRODUCTS</span></h2>
+            <h2 className="section-title">INDUSTRIAL <span className="text-accent" style={{ fontStyle: 'italic', fontFamily: 'var(--font-heading)' }}>PRODUCTS</span></h2>
           </div>
           <div className="col-lg-5 offset-lg-1" data-aos="fade-left">
-            <p className="text-light fs-6 fw-light mb-0" style={{ borderLeft: '3px solid var(--accent)', paddingLeft: '20px', lineHeight: 1.8, opacity: 0.9 }}>
+            <p className="text-light mb-0" style={{ borderLeft: '3px solid var(--accent)', paddingLeft: '20px', lineHeight: 1.95, opacity: 0.85, fontSize: '0.95rem', fontWeight: 300, fontFamily: 'var(--font-body)' }}>
               Each product is rigorously tested for quality and efficiency, meeting all industrial safety and reliability standards for the most demanding environments.
             </p>
           </div>
@@ -51,11 +51,11 @@ const Products = () => {
                 </div>
                 <div className="product-content p-4">
                   <div className="d-flex align-items-center gap-2 mb-3">
-                    <span className="badge bg-accent px-2 py-1 text-uppercase" style={{ fontSize: '0.6rem', letterSpacing: '0.1em', borderRadius: '0' }}>{product.tag}</span>
+                    <span className="badge bg-accent px-2 py-1 text-uppercase" style={{ fontSize: '0.55rem', letterSpacing: '0.25em', borderRadius: '0', fontFamily: 'var(--font-tag)', fontWeight: 200 }}>{product.tag}</span>
                   </div>
-                  <h4 className="fw-black text-light text-uppercase" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem' }}>{product.title}</h4>
-                  <p className="text-light-muted mt-3 mb-4" style={{ fontSize: '0.95rem', lineHeight: 1.7, opacity: 0.95, fontWeight: 400 }}>{product.desc}</p>
-                  <a href="#contact" className="btn-outline-custom w-100 justify-content-center py-2" style={{ fontSize: '0.8rem' }}>Order Information</a>
+                  <h4 className="text-light text-uppercase" style={{ fontFamily: 'var(--font-heading)', fontSize: '0.82rem', fontWeight: 600, letterSpacing: '0.12em' }}>{product.title}</h4>
+                  <p className="text-light-muted mt-3 mb-4" style={{ fontSize: '0.78rem', lineHeight: 1.65, opacity: 0.85, fontWeight: 300, fontFamily: 'var(--font-body)' }}>{product.desc}</p>
+                  <a href="#contact" className="btn-outline-custom w-100 justify-content-center py-2" style={{ fontSize: '0.62rem', letterSpacing: '0.2em' }}>Order Information</a>
                 </div>
               </div>
             </div>

@@ -48,8 +48,8 @@ const Services = () => {
         <div className="row justify-content-center mb-5 pb-lg-4">
           <div className="col-lg-7 text-center" data-aos="fade-up">
             <span className="section-tag">OUR EXPERTISE</span>
-            <h2 className="section-title" style={{ color: 'var(--light)' }}>CORE <span className="text-accent">SERVICES</span></h2>
-            <p className="text-light small text-uppercase fw-bold" style={{ letterSpacing: '0.2rem', opacity: 0.9 }}>Providing world-class fabrication and engineering services from our base in Coimbatore, Tamil Nadu.</p>
+            <h2 className="section-title">CORE <span className="text-accent" style={{ fontStyle: 'italic', fontFamily: 'var(--font-heading)' }}>SERVICES</span></h2>
+            <p className="text-light text-uppercase" style={{ fontSize: '0.58rem', letterSpacing: '0.35em', opacity: 0.7, fontFamily: 'var(--font-tag)', fontWeight: 200, marginTop: '15px' }}>Providing world-class fabrication and engineering services from our base in Coimbatore, Tamil Nadu.</p>
           </div>
         </div>
 
@@ -67,7 +67,7 @@ const Services = () => {
                 cursor: 'pointer'
               }}>
                 {/* Large Background Transparent Number */}
-                <div className="position-absolute fs-1 fw-black text-light opacity-5" style={{ bottom: '20px', right: '30px', fontFamily: 'var(--font-heading)', fontSize: '5rem', pointerEvents: 'none' }}>0{index + 1}</div>
+                <div className="position-absolute text-light opacity-5" style={{ bottom: '20px', right: '30px', fontFamily: 'var(--font-display)', fontStyle: 'italic', fontWeight: 400, fontSize: '5rem', pointerEvents: 'none' }}>0{index + 1}</div>
                 
                 {/* Top Border Glow (Pseudo) */}
                 <div className="accent-line position-absolute top-0 start-0 w-0 h-2" style={{ transition: 'width 0.5s ease', width: '0%', height: '2px', backgroundColor: 'var(--accent)' }}></div>
@@ -81,11 +81,11 @@ const Services = () => {
                   {service.icon}
                 </div>
 
-                <h4 className="fw-black text-light text-uppercase mb-3" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', letterSpacing: '0.05em' }}>{service.title}</h4>
-                <p className="text-light-muted mb-0" style={{ fontSize: '0.95rem', lineHeight: 1.7, opacity: 0.95, fontWeight: 400 }}>{service.desc}</p>
+                <h4 className="text-light text-uppercase mb-3" style={{ fontFamily: 'var(--font-heading)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.12em', wordSpacing: '0.08em' }}>{service.title}</h4>
+                <p className="text-light-muted mb-0" style={{ fontSize: '0.85rem', lineHeight: 1.8, opacity: 0.85, fontWeight: 300, fontFamily: 'var(--font-body)' }}>{service.desc}</p>
                 
                 <div className="mt-4 pt-4 border-top border-white/5 pb-2">
-                   <span className="text-accent text-uppercase small tracking-widest fw-bold" style={{ fontSize: '0.65rem', letterSpacing: '0.2em' }}>{service.tag}</span>
+                   <span className="text-accent text-uppercase" style={{ fontSize: '0.58rem', letterSpacing: '0.35em', fontFamily: 'var(--font-tag)', fontWeight: 200 }}>{service.tag}</span>
                 </div>
               </div>
             </div>

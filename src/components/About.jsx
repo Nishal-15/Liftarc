@@ -91,9 +91,145 @@ const About = () => {
       </div>
 
       <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400;1,6..96,700&family=Raleway:wght@200;300;400;500;600&family=Josefin+Sans:wght@100;200;300;400;600&display=swap');
+
+        /* ── Root font variables ── */
+        #aboutus {
+          --font-heading:  'Playfair Display', serif;
+          --font-display:  'Bodoni Moda', serif;
+          --font-body:     'Raleway', sans-serif;
+          --font-tag:      'Josefin Sans', sans-serif;
+
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          text-rendering: optimizeLegibility;
+        }
+
+        /* ── WHO WE ARE tag ──
+           Josefin Sans 100 weight, very wide tracking.
+           Feels like a premium label. */
+        #aboutus .section-tag {
+          font-family: 'Josefin Sans', sans-serif !important;
+          font-size: 0.6rem !important;
+          font-weight: 100 !important;
+          letter-spacing: 0.55em !important;
+          line-height: 1 !important;
+          text-transform: uppercase !important;
+          word-spacing: 0.3em !important;
+        }
+
+        /* ── Main H2 ──
+           Playfair Display 700, mild tracking, tight leading.
+           Let the serifs breathe — don't over-space. */
+        #aboutus .section-title,
+        #aboutus h2 {
+          font-family: 'Playfair Display', serif !important;
+          font-size: clamp(1.6rem, 3vw, 2.4rem) !important;
+          font-weight: 700 !important;
+          letter-spacing: 0.04em !important;
+          line-height: 1.18 !important;
+          word-spacing: 0.05em !important;
+        }
+
+        /* ── Feature card h5s ──
+           Playfair Display 600, small-caps rhythm.
+           Tighter tracking suits the smaller size. */
+        #aboutus h5 {
+          font-family: 'Playfair Display', serif !important;
+          font-size: 0.82rem !important;
+          font-weight: 600 !important;
+          letter-spacing: 0.12em !important;
+          line-height: 1.4 !important;
+          word-spacing: 0.08em !important;
+        }
+
+        /* ── Stat numbers: 01ST / 9+ ──
+           Bodoni Moda Italic 900 at display size.
+           Negative tracking compacts the huge glyph gracefully. */
+        #aboutus .floating-card .fs-1 {
+          font-family: 'Bodoni Moda', serif !important;
+          font-style: italic !important;
+          font-weight: 900 !important;
+          font-size: 3rem !important;
+          letter-spacing: -0.04em !important;
+          line-height: 0.95 !important;
+        }
+
+        /* Superscript ST inside stat */
+        #aboutus .floating-card .fs-1 .fs-5 {
+          font-family: 'Josefin Sans', sans-serif !important;
+          font-style: normal !important;
+          font-weight: 200 !important;
+          font-size: 0.75rem !important;
+          letter-spacing: 0.12em !important;
+          vertical-align: super !important;
+          margin-left: 2px !important;
+        }
+
+        /* ── Card UPPERCASE labels ──
+           Josefin Sans 200, very open tracking. */
+        #aboutus .floating-card .text-uppercase {
+          font-family: 'Josefin Sans', sans-serif !important;
+          font-size: 0.58rem !important;
+          font-weight: 200 !important;
+          letter-spacing: 0.35em !important;
+          line-height: 1.2 !important;
+          word-spacing: 0.2em !important;
+        }
+
+        /* ── Card descriptor small text ──
+           Raleway 300, comfortable reading rhythm. */
+        #aboutus .floating-card .small {
+          font-family: 'Raleway', sans-serif !important;
+          font-size: 0.78rem !important;
+          font-weight: 300 !important;
+          letter-spacing: 0.025em !important;
+          line-height: 1.65 !important;
+        }
+
+        /* ── Body paragraphs ──
+           Raleway 300 — generous line-height, minimal tracking. */
+        #aboutus .about-content p,
+        #aboutus p {
+          font-family: 'Raleway', sans-serif !important;
+          font-size: 1rem !important;
+          font-weight: 300 !important;
+          letter-spacing: 0.02em !important;
+          line-height: 1.95 !important;
+          word-spacing: 0.06em !important;
+        }
+
+        /* Inline bold brand name → italic Playfair for contrast */
+        #aboutus .about-content .fw-bold {
+          font-family: 'Playfair Display', serif !important;
+          font-style: italic !important;
+          font-weight: 600 !important;
+          letter-spacing: 0.01em !important;
+        }
+
+        /* ── Ghost year watermark ──
+           Bodoni Moda Italic, ultra-light visual weight. */
+        #aboutus .position-absolute.fs-1.fw-black {
+          font-family: 'Bodoni Moda', serif !important;
+          font-style: italic !important;
+          font-weight: 400 !important;
+          letter-spacing: 0.08em !important;
+        }
+
+        /* ── CTA button ──
+           Josefin Sans 600, tracked like a luxury label. */
+        #aboutus .btn-primary-custom {
+          font-family: 'Josefin Sans', sans-serif !important;
+          font-size: 0.68rem !important;
+          font-weight: 600 !important;
+          letter-spacing: 0.28em !important;
+          text-transform: uppercase !important;
+          word-spacing: 0.15em !important;
+        }
+
         @keyframes spin {
           from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
+          to   { transform: rotate(360deg); }
         }
       `}</style>
     </section>

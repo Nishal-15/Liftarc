@@ -40,15 +40,15 @@ const WhyChooseUs = () => {
         <div className="row g-5 align-items-center">
           <div className="col-lg-5" data-aos="fade-right">
              <span className="section-tag">OUR STRENGTHS</span>
-             <h2 className="section-title mb-4">WHY INDUSTRY <span className="text-accent">LEADERS</span> TRUST US</h2>
-             <p className="text-light mt-4" style={{ opacity: 0.95, fontSize: '1.05rem', lineHeight: 1.8 }}>
+             <h2 className="section-title mb-4">WHY INDUSTRY <span className="text-accent" style={{ fontStyle: 'italic', fontFamily: 'var(--font-heading)' }}>LEADERS</span> TRUST US</h2>
+             <p className="text-light mt-4" style={{ opacity: 0.85, fontSize: '1rem', lineHeight: 1.95, fontWeight: 300, fontFamily: 'var(--font-body)' }}>
                 Driven by precision and quality, we partner with manufacturers across Coimbatore to help them achieve their production goals through reliable structural and mechanical engineering.
              </p>
              <div className="accent-quote p-4" style={{ backgroundColor: 'var(--dark3)', borderLeft: '4px solid var(--accent)', position: 'relative' }}>
-                <p className="text-light fst-italic mb-0" style={{ fontSize: '1rem', lineHeight: 1.7, opacity: 0.8 }}>
-                   "Our mission is to bridge the gap between complex engineering challenges and durable, cost-effective fabrication solutions."
-                </p>
-                <div className="fw-black text-accent mt-3 text-uppercase" style={{ fontFamily: 'var(--font-heading)', fontSize: '0.8rem', letterSpacing: '0.15em' }}>— Management Team</div>
+                 <p className="text-light fst-italic mb-0" style={{ fontSize: '0.95rem', lineHeight: 1.7, opacity: 0.7, fontFamily: 'var(--font-heading)' }}>
+                    "Our mission is to bridge the gap between complex engineering challenges and durable, cost-effective fabrication solutions."
+                 </p>
+                 <div className="text-accent mt-3 text-uppercase" style={{ fontFamily: 'var(--font-tag)', fontSize: '0.58rem', letterSpacing: '0.3em', fontWeight: 200 }}>— Management Team</div>
              </div>
           </div>
 
@@ -65,8 +65,8 @@ const WhyChooseUs = () => {
                         {reason.icon}
                      </div>
                      <div>
-                        <h4 className="fw-black text-light text-uppercase mb-2" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.25rem' }}>{reason.title}</h4>
-                        <p className="text-light-muted mb-0" style={{ lineHeight: 1.8, opacity: 0.95, fontSize: '0.92rem' }}>{reason.desc}</p>
+                        <h4 className="text-light text-uppercase mb-2" style={{ fontFamily: 'var(--font-heading)', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.12em' }}>{reason.title}</h4>
+                        <p className="text-light-muted mb-0" style={{ lineHeight: 1.8, opacity: 0.85, fontSize: '0.85rem', fontWeight: 300, fontFamily: 'var(--font-body)' }}>{reason.desc}</p>
                      </div>
                    </div>
                  </div>
