@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, Download } from 'lucide-react';
+import { jsPDF } from 'jspdf';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -14,8 +16,77 @@ const Contact = () => {
         setFormData({ ...formData, [e.target.id]: e.target.value });
     };
 
+    const generatePDF = (data) => {
+        const doc = new jsPDF();
+        
+        // Branded Header
+        doc.setFillColor(15, 23, 42); // Navy Dark
+        doc.rect(0, 0, 210, 40, 'F');
+        doc.setTextColor(255, 255, 255);
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(24);
+        doc.text('LIFTARC INDUSTRIES', 20, 25);
+        
+        doc.setFontSize(10);
+        doc.setFont('helvetica', 'normal');
+        doc.text('Precision Fabrication & Engineering Job Work', 20, 32);
+        
+        // Enquiry Details Header
+        doc.setTextColor(15, 23, 42);
+        doc.setFontSize(18);
+        doc.setFont('helvetica', 'bold');
+        doc.text('PROJECT ENQUIRY SUMMARY', 20, 55);
+        
+        doc.setDrawColor(0, 174, 239); // Accent Cyan
+        doc.setLineWidth(1);
+        doc.line(20, 60, 80, 60);
+        
+        // Content
+        doc.setFontSize(12);
+        doc.setTextColor(50, 50, 50);
+        
+        const details = [
+            ['Customer Name', data.name],
+            ['Email Address', data.email],
+            ['Phone', data.phone || 'N/A'],
+            ['Service Required', data.service || 'Industrial Fabrication'],
+            ['Date Submitted', new Date().toLocaleDateString()]
+        ];
+        
+        let yPos = 75;
+        details.forEach(([label, value]) => {
+            doc.setFont('helvetica', 'bold');
+            doc.text(`${label}:`, 20, yPos);
+            doc.setFont('helvetica', 'normal');
+            doc.text(`${value}`, 60, yPos);
+            yPos += 12;
+        });
+        
+        // Message Section
+        doc.setFont('helvetica', 'bold');
+        doc.text('Project Requirements:', 20, yPos + 5);
+        doc.setFont('helvetica', 'normal');
+        const splitMessage = doc.splitTextToSize(data.message, 170);
+        doc.text(splitMessage, 20, yPos + 15);
+        
+        // Footer
+        const pageHeight = doc.internal.pageSize.height;
+        doc.setFillColor(240, 249, 255); // Light Blue
+        doc.rect(0, pageHeight - 30, 210, 30, 'F');
+        doc.setTextColor(12, 74, 110); // Deep Blue
+        doc.setFontSize(9);
+        doc.text('Thank you for choosing LiftArc Industries. Our technical team will review your specs shortly.', 20, pageHeight - 15);
+        doc.text('Contact: +91 96291 58102 | Email: liftarcindustries@gmail.com', 20, pageHeight - 10);
+        
+        doc.save(`LiftArc_Enquiry_${data.name.replace(/\s+/g, '_')}.pdf`);
+    };
+
     const handleEmailEnquiry = (e) => {
         e.preventDefault();
+        
+        // Trigger PDF Generation
+        generatePDF(formData);
+
         const subject = encodeURIComponent('LiftArc Project Enquiry');
         const body = encodeURIComponent(
             `Name: ${formData.name}\n` +

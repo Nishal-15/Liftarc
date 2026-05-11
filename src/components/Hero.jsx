@@ -16,12 +16,25 @@ const Counter = ({ value, duration = 2 }) => {
 const Hero = () => {
   return (
     <section id="home" className="hero min-vh-100 d-flex position-relative overflow-hidden py-5" 
-      style={{ 
-        backgroundImage: 'url("/images/hero_bg.png")', 
-        backgroundSize: 'cover', 
-        backgroundPosition: 'center', 
-        backgroundRepeat: 'no-repeat'
-      }}>
+      style={{ backgroundColor: '#0f172a' }}
+    >
+      {/* Video Background */}
+      <video 
+        autoPlay 
+        muted 
+        loop 
+        playsInline 
+        className="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+        style={{ opacity: 0.4, zIndex: 0 }}
+      >
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-welding-a-metal-piece-in-a-workshop-40010-large.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark Overlay for Readability */}
+      <div className="position-absolute top-0 start-0 w-100 h-100" style={{ 
+        background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.4) 100%)',
+        zIndex: 1 
+      }}></div>
       {/* Background Gradients Overlay for Depth */}
       <div className="position-absolute w-100 h-100" style={{ 
         background: 'linear-gradient(160deg, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.7) 50%, rgba(15,23,42,0.95) 100%)',

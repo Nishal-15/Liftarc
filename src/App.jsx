@@ -7,6 +7,7 @@ import About from './components/About';
 import Services from './components/Services';
 import Products from './components/Products';
 import WhyChooseUs from './components/WhyChooseUs';
+import Testimonials from './components/Testimonials';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -52,6 +53,7 @@ function App() {
         <Products />
         <Projects />
         <WhyChooseUs />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />
