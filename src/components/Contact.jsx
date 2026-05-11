@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, Download } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, Download, CheckCircle } from 'lucide-react';
 import { jsPDF } from 'jspdf';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -11,6 +11,7 @@ const Contact = () => {
         service: '',
         message: ''
     });
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -26,6 +27,14 @@ const Contact = () => {
         doc.setFont('helvetica', 'bold');
         doc.setFontSize(24);
         doc.text('LIFTARC INDUSTRIES', 20, 25);
+
+        // Watermark
+        doc.saveGraphicsState();
+        doc.setGState(new doc.GState({opacity: 0.1}));
+        doc.setFontSize(60);
+        doc.setTextColor(150, 150, 150);
+        doc.text('LIFTARC', 50, 150, { angle: 45 });
+        doc.restoreGraphicsState();
         
         doc.setFontSize(10);
         doc.setFont('helvetica', 'normal');
@@ -87,16 +96,23 @@ const Contact = () => {
         // Trigger PDF Generation
         generatePDF(formData);
 
-        const subject = encodeURIComponent('LiftArc Project Enquiry');
+        // Show success message
+        setIsSubmitted(true);
+        setTimeout(() => setIsSubmitted(false), 5000);
+
+        const subject = encodeURIComponent(`LiftArc Project Enquiry - ${formData.name}`);
         const body = encodeURIComponent(
-            `Name: ${formData.name}\n` +
-            `Email: ${formData.email}\n` +
-            `Phone: ${formData.phone}\n` +
-            `Service: ${formData.service}\n\n` +
-            `Project Details:\n${formData.message}`
+            `DEAR LIFTARC TEAM,\n\n` +
+            `I WOULD LIKE TO ENQUIRE ABOUT THE FOLLOWING PROJECT:\n\n` +
+            `NAME: ${formData.name}\n` +
+            `EMAIL: ${formData.email}\n` +
+            `PHONE: ${formData.phone}\n` +
+            `SERVICE: ${formData.service}\n\n` +
+            `PROJECT DETAILS:\n${formData.message}\n\n` +
+            `BEST REGARDS,\n${formData.name}`
         );
-        const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=liftarc@gmail.com&su=${subject}&body=${body}`;
-        const mailtoURL = `mailto:liftarc@gmail.com?subject=${subject}&body=${body}`;
+        const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=liftarcindustries@gmail.com&su=${subject}&body=${body}`;
+        const mailtoURL = `mailto:liftarcindustries@gmail.com?subject=${subject}&body=${body}`;
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
         if (isMobile) {
@@ -209,7 +225,20 @@ const Contact = () => {
                                             <textarea id="message" rows="4" className="form-control" value={formData.message} onChange={handleChange} placeholder="TELL US ABOUT YOUR PROJECT REQUIREMENTS..." required style={{ backgroundColor: 'var(--light-bg2)', border: '1px solid var(--light-border)', color: 'var(--light-text)', padding: '12px', borderRadius: '0' }}></textarea>
                                         </div>
                                     </div>
-                                    <div className="col-12 text-center mt-3">
+                                    <div className="col-12 text-center mt-3 position-relative">
+                                        <AnimatePresence>
+                                            {isSubmitted && (
+                                                <motion.div 
+                                                    initial={{ opacity: 0, y: 10 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    exit={{ opacity: 0, y: -10 }}
+                                                    className="position-absolute w-100 top-0 start-0 d-flex align-items-center justify-content-center gap-2 py-3"
+                                                    style={{ backgroundColor: 'var(--light-bg)', zIndex: 10, color: 'var(--accent)', fontWeight: 700, letterSpacing: '0.1em' }}
+                                                >
+                                                    <CheckCircle size={20} /> ENQUIRY SENT SUCCESSFULLY
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
                                         <button type="submit" className="btn-primary-custom w-100 py-3 justify-content-center" style={{ fontSize: '0.68rem', letterSpacing: '0.28em' }}>
                                             SUBMIT ENQUIRY <Send size={14} className="ms-2" />
                                         </button>
